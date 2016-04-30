@@ -22,4 +22,24 @@ test:
 
 production:
   <<: *default
-  database: db/production.sqlite3faultpassword
+  database: db/production.sqlite3
+
+
+
+# postgres_defaults: &postgres_defaults
+#   encoding: utf8
+#   template: template0
+#   host: localhost
+#   adapter: postgresql
+#
+# development:
+#   <<: *postgres_defaults
+#   database: thatstyle
+#   username: zurihunter
+#   password: iamthedefaultpassword
+#
+# test:
+#   <<: *postgres_defaults
+#   database: thatstyle_test
+#   username: zurihunter
+#   password: iamthedefaultpassword
