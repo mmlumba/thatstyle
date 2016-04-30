@@ -7,7 +7,20 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+  <div class="container">
+    <ul class="nav nav-tabs">
+      <li><%= link_to "ThatSyle", root_path, class: 'topbar' %></li>
+      <div class="pull-right user-info">
+        <% if current_user %>
+          Hello <%= link_to (current_user.name || current_user.email), edit_user_registration_path %>! 
+          <%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: 'signout' %>
+        <% else %>
+          <%= link_to "Sign In", new_user_session_path, class: 'signout' %>
+          <%= link_to "Sign Up", new_user_registration_path, class: 'signout' %>
+        <% end %>
+      </div>
+    </ul>
+  </div>
 <%= yield %>
 
 </body>

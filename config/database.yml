@@ -7,11 +7,11 @@ postgres_defaults: &postgres_defaults
 development:
   <<: *postgres_defaults
   database: thatstyle
-  username: <your computers username>
+  username: katiesteiner
   password: iamthedefaultpassword
 
 test:
   <<: *postgres_defaults
   database: thatstyle_test
-  username: <your computers username>
+  username: katiesteiner
   password: iamthedefaultpassword
