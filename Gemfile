@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 gem 'rails', '4.2.6'
 # Use PG as the database for Active Record
-gem 'pg'
+gem 'pg', '0.18.4'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
@@ -13,6 +13,8 @@ gem 'jbuilder', '~> 2.0'
 gem 'aws-sdk'
 gem 'pry'
 gem 'aws-sdk-rails'
+gem 'bootstrap-sass', '~> 3.2.0'
+gem 'autoprefixer-rails'
 
 gem 'sdoc', '~> 0.4.0', group: :doc
 
