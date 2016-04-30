@@ -31,6 +31,10 @@
     <%= f.password_field :password_confirmation, autocomplete: "off" %>
   </div>
 
+  <div><%= f.label :type %>
+    <%= f.select :type, options_for_select(%w[User Stylist]) %>
+  </div>
+  
   <div class="actions">
     <%= f.submit "Sign up" %>
   </div>
