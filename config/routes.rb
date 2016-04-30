@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   get 'images/create'
   get 'images/destroy'
 
+  get 'pages/faq'
+
 #Temporary route
   root 'pages#home'
 end
