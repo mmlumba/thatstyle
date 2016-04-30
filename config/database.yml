@@ -1,17 +1,17 @@
 postgres_defaults: &postgres_defaults
   encoding: utf8
   template: template0
-  host: localhost
+  host: localhost:3000
   adapter: postgresql
 
 development:
   <<: *postgres_defaults
   database: thatstyle
-  username: <your computers username>
+  username: zurihunter
   password: iamthedefaultpassword
 
 test:
   <<: *postgres_defaults
   database: thatstyle_test
-  username: <your computers username>
+  username: zurihunter
   password: iamthedefaultpassword
