@@ -9,7 +9,6 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'aws-sdk'
 gem 'devise'
-gem 'figaro'
 gem 'carrierwave' #imageuploading
 gem 'pry'
 gem 'aws-sdk-rails'
