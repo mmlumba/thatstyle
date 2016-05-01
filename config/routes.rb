@@ -6,5 +6,5 @@ resources :images, only: [:index, :create, :new, :destroy]
   get 'pages/faq'
 
 #Temporary route
-  root 'images#new'
+  root 'images#index'
 end
