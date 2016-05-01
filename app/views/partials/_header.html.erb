@@ -1,0 +1,35 @@
+<!-- Always shows a header, even in smaller screens. -->
+  <header class="mdl-layout__header">
+    <div class="mdl-layout__header-row">
+      <!-- Title -->
+      <span class="mdl-layout-title"><%= link_to "thatStyle", root_path%></span>
+      <!-- Add spacer, to align navigation to the right -->
+      <div class="mdl-layout-spacer"></div>
+      <!-- Navigation. We hide it in small screens. -->
+      <nav class="mdl-navigation mdl-layout--large-screen-only">
+
+        <% if current_user %>
+          <button id="demo-menu-lower-left" class="mdl-button mdl-js-button mdl-button--icon">
+            <i class="material-icons">more_vert</i>
+          </button>
+
+          <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="demo-menu-lower-left">
+            <li class="mdl-menu__item"><%= link_to "Account Settings", edit_user_registration_path %></li>
+            <li class="mdl-menu__item"><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
+        <% else %>
+            <li class="mdl-menu__item"><%= link_to "Sign In", new_user_session_path %></li>
+            <li class="mdl-menu__item"><%= link_to "Sign Up", new_user_registration_path %>li>
+        <% end %>
+            <li class="mdl-menu__item"><%= link_to "FAQ", pages_faq_path %></li>
+            <li class="mdl-menu__item"><%= link_to "Contact Us", pages_contact_path %></li>
+          </ul>
+
+        <% if current_user %>
+          <span> Hello <%= current_user.first_name || current_user.email %>! </span>
+        <% else %>
+        <a class="mdl-navigation__link" href=""><%= link_to "Sign In", new_user_session_path %></a>
+        <a class="mdl-navigation__link" href=""><%= link_to "Sign Up", new_user_registration_path %></a>
+        <% end %>
+      </nav>
+    </div>
+  </header>
