@@ -11,7 +11,7 @@
 
 <div class="container">
   <ul class="nav nav-tabs">
-    <li><%= link_to "ThatSyle", root_path, class: 'topbar' %></li>
+    <li><%= link_to "ThatStyle", root_path, class: 'topbar' %></li>
     <div class="pull-right user-info">
       <% if current_user %>
         Hello <%= link_to (current_user.first_name || current_user.email), edit_user_registration_path %>!
