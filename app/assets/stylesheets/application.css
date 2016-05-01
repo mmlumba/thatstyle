@@ -15,4 +15,44 @@
  *= require material
  */
 
-@import "material"; 
+@import "material";
+
+/*html {
+  background: url(https://stylewatch.files.wordpress.com/2016/04/giphy.gif) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}*/
+
+#bg {
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  z-index: -50;
+
+}
+#bg img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  min-width: 50%;
+  min-height: 50%;
+}
+
+.demo-card-wide.mdl-card {
+  width: 700px;
+}
+.demo-card-wide > .mdl-card__title {
+  color: #fff;
+  height: 400px;
+  background: url('../assets/demos/welcome_card.jpg') center / cover;
+}
+.demo-card-wide > .mdl-card__menu {
+  color: #fff;
+}
