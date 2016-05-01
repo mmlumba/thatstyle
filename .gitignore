@@ -15,5 +15,12 @@
 /log/*
 !/log/.keep
 /tmp
+Gemfile.lock
+
+
+#Ignore database file
+/config/database.yml
+# Ignore application configuration
+/config/application.yml
 
 .bash_profile
