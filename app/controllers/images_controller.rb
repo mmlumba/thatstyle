@@ -11,8 +11,8 @@ class ImagesController < ApplicationController
   def create
     @image = Image.new(image_params)
 
-    if @resume.save
-      redirect_to resume_path, notice: "The style you have added #{@image.name}, has been uploaded"
+    if @image.save
+      redirect_to images_path, notice: "The style you have added #{@image.name}, has been uploaded"
     else
       render "new"
     end
@@ -21,11 +21,11 @@ class ImagesController < ApplicationController
   def destroy
     @image = Image.find(params[:id])
     @image.destroy
-    redirect_to resumes_path, notice: "You have deleted your style #{@image.name}."
+    redirect_to images_path, notice: "You have deleted your style #{@image.name}."
   end
 
   private
   def image_params
-    param.require(:image).permit(:name, :attachment)
+    params.require(:image).permit(:name, :attachment)
   end
 end
